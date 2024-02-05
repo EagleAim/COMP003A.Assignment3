@@ -10,7 +10,7 @@ namespace COMP003A.Assignment3
         static void Main(string[] args)
         {
             Console.WriteLine("Numeric to letter grade using and if-else statement");
-            Console.Write("\tEnter your numbered grade (0-100) ");
+            Console.Write("\tEnter your numbered grade (0-100): ");
             double numericGrade = Convert.ToInt32(Console.ReadLine());
 
             if (numericGrade >= 90 && numericGrade <= 100)
@@ -36,12 +36,7 @@ namespace COMP003A.Assignment3
             {
                 Console.WriteLine("\t Grade: F");
             }
-
-            else if (numericGrade >= 100)
-            {
-                Console.WriteLine("\t Invalid");
-            }
-            else if (numericGrade <= 0)
+            else
             {
                 Console.WriteLine("\t Invalid");
             }
@@ -49,8 +44,43 @@ namespace COMP003A.Assignment3
 
             Console.WriteLine("***************************************************");
             Console.WriteLine("Integer to string day using an switch statement");
-            Console.Write("\tEnter your numbered grade (0-100) ");
+            Console.Write("\t Enter a integer day of the week (1-7): ");
+            double numericDay = Convert.ToInt32(Console.ReadLine());
 
+            switch (numericDay)
+            {
+                case 1:
+                    Console.WriteLine("\tMonday");
+                    break;
+
+                case 2:
+                    Console.WriteLine("\tTuesday");
+                    break;
+
+                case 3:
+                    Console.WriteLine("\tWednesday");
+                    break;
+
+                case 4:
+                    Console.WriteLine("\tThursday");
+                    break;
+
+                case 5:
+                    Console.WriteLine("\tFriday");
+                    break;
+
+                case 6:
+                    Console.WriteLine("\tSaturday");
+                    break;
+
+                case 7:
+                    Console.WriteLine("\tSunday");
+                    break;
+
+                default:
+                    Console.WriteLine("\t Invalid day");
+                    break;
+            }
         }
     }
 }
